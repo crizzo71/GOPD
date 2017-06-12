@@ -11,7 +11,7 @@ import sys
 def getApiKey():
     if 'RALLY_API_KEY' in os.environ:
         api_key = os.environ['RALLY_API_KEY']
-    elif 'OPENSHIFT_HOMEDIR' in os.environ: # this will be use onece we have openshift env.
+    elif 'OPENSHIFT_HOMEDIR' in os.environ: # this will be use once we have openshift env.
         api_key = open(os.path.expanduser('~/app-root/repo/wsgi/xfr/metrics/.rally')).read().strip()
     else:
         api_key = open(os.path.expanduser('~/djangogirls/.rally')).read().strip()
