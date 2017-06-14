@@ -1,0 +1,18 @@
+{
+  "name": "gopd",
+  "description": "gopd web app",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "patternfly": "^3.25.0"
+  }
+}
