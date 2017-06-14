@@ -1,12 +1,14 @@
 {% extends 'blog/base.html' %}
 {% block primary %}
-<button type="button" id="btnPizza" class="btn btn-info" style ="float:right;margin-bottom:20px;"> Download </button>
+<button type="button" id="btnPizza" class="btn btn-info" style ="float:right;margin-bottom:20px;"> Download Spreadsheet</button>
 <div id="table_wrapper">
   <table class='table table-striped table-bordered'>
     <tr>
       <th> Kanban </th>
       <th> StoryID </th>
       <th> Name </th>
+      <th></th>
+      <th></th>
     </tr>
     {% for story in stories %}
     <tr>
