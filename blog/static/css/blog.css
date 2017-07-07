@@ -7,3 +7,38 @@ h1 {
 	width:256px;
 	padding-bottom: 15px;
 }
+.filter-row{
+   margin-bottom:25px;
+   border-top: 2px solid #f6f6f6 ;
+   border-bottom: 2px solid #f1f1f1 ;
+   background-color:#fafafa ;
+}
+.filter-row .text{
+   padding-left:35px;
+   font-size: 14px;
+   font-weight: bold;
+   margin-top:6px;
+}
+.filter-button.selected{
+   box-shadow: 0 0 5px 2px #0ca6f2 ;
+   -webkit-box-shadow: 0 0 5px 2px #0ca6f2 ;
+   -moz-box-shadow: 0 0 5px 2px #0ca6f2 ;
+}
+.filter-button{
+   text-align: center;
+   font-weight: bold;
+   cursor:pointer;
+   margin-top: 5px;
+   margin-bottom:5px;
+}
+#Backlog.on{
+   background-color: #F2BE00 ;
+}
+
+#Developing.on{
+   background-color: #C896E4 ;
+}
+
+#Done.on{
+   background-color: #2DC408 ;
+}

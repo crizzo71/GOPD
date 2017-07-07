@@ -4,16 +4,17 @@ def home(request):
     return render(request, 'blog/home.html')
 def story_list(request):
     rally = initRally()
-    query_criteria = 'BusOpsKanban = "Backlog"'
+    query_criteria = 'State != ""'
     #'BusOpsKanban != "Backlog"
-    response = rally.get('UserStory',fetch = True, query=query_criteria)
-    print (response)
+    response = rally.get('Feature',fetch = True) #query=query_criteria)
+    #print (response)
+
     story_list = []
     if not response.errors:
         for story in response:
             #print (story.details())
             a_story={}
-            a_story['Kanban'] = story.BusOpsKanban
+            a_story['State'] = story.State.Name if story.State else "Backlog"
             a_story['id'] = story.FormattedID
             a_story['name'] = story.Name
             a_story['Opened']=story.CreationDate
@@ -25,4 +26,17 @@ def story_list(request):
     print(story_list)
     return render(request, 'blog/story_list.html', {'stories': story_list})
 def graph(request):
+    rally = initRally()
+    response = rally.get('UserStory',fetch = True, query='BusOpsKanban != ""')
+    print(response)
+    story_list = []
+    if not response.errors:
+        for story in response:
+            #print (story.details())
+            a_story={}
+            a_story['Kanban'] = story.BusOpsKanban
+            story_list.append(a_story)
+    else:
+        story_list = response.errors
+    print(story_list)
     return render(request, 'blog/graph.html')
