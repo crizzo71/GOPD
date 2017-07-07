@@ -7,8 +7,8 @@
       <th> Kanban </th>
       <th> StoryID </th>
       <th> Name </th>
-      <th></th>
-      <th></th>
+      <th> Opened </th>
+      <th> Owner </th>
     </tr>
     {% for story in stories %}
     <tr>
@@ -16,8 +16,8 @@
       <td>{{story.id}}</td>
       <td>{{story.name}}</td>
       <td>{{story.Opened}}</td>
-      <td>{{story.Requester}}</td>
-      
+      <td>{{story.Requester}</td>
+
     </tr>
     {% endfor %}
   </table>
