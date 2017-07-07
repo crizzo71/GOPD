@@ -17,7 +17,7 @@ def story_list(request):
             a_story['id'] = story.FormattedID
             a_story['name'] = story.Name
             a_story['Opened']=story.CreationDate
-            a_story['Requester']=story.Owner.Name  or "unassigned"   
+            a_story['Requester']= story.Owner.Name if story.Owner else "unassigned"
            #a_story['Kanban'] = story.c_BizOpsKanbanState
             story_list.append(a_story)
     else:
