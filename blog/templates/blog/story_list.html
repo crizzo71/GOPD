@@ -22,6 +22,36 @@
     {% endfor %}
   </table>
 </div>
+<!-- Table HTML -->
+<table class="table table-striped table-bordered table-hover" id="table1">
+  <thead>
+    <tr>
+      <th> Kanban </th>
+      <th> StoryID </th>
+      <th> Name </th>
+      <th> Opened </th>
+      <th> Owner </th>
+    </tr>
+  </thead>
+  {% for story in stories %}
+  <tr>
+    <td>{{story.Kanban}}</td>
+    <td>{{story.id}}</td>
+    <td>{{story.name}}</td>
+    <td>{{story.Opened}}</td>
+    <td>{{story.Requester}}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+<script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+<script>
+  // Initialize Datatables
+  $(document).ready(function() {
+    $('.datatable').dataTable();
+  });
+</script>
 <script type="text/javascript">
 $(document).ready(function(){
 $('#btnPizza').click(function(e) {
