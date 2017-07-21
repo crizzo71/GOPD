@@ -18,7 +18,7 @@
       <td class='{{story.State}}'>{{story.State}}</td>
       <td>{{story.id}}</td>
       <td>{{story.name}}</td>
-      <td>{{story.Opened}}</td>
+      <td>{{story.Opened|date:"d-M-Y"|default:"unassigned"}}</td>
       <td>{{story.Requester}}</td>
 
     </tr>
