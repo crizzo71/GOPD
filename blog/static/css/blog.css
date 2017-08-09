@@ -32,13 +32,25 @@ h1 {
    margin-bottom:5px;
 }
 #Backlog.on{
-   background-color: #F2BE00 ;
+   background-color: #DCDCDC ;
 }
 
-#Developing.on{
+#Elaboration.on{
    background-color: #C896E4 ;
 }
 
-#Done.on{
+#Dev.on{
    background-color: #2DC408 ;
+}
+#QA.on{
+   background-color: #2DC408 ;
+}
+#Acceptance.on{
+   background-color: #2DC408 ;
+}
+#Ready.on{
+   background-color: #2DC408 ;
+}
+#Releasing.on{
+   background-color: #DCDCDC ;
 }

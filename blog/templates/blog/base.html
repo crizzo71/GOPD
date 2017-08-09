@@ -1,13 +1,23 @@
 <html>
   <head>
+      {% load staticfiles %}
+  <!-- jQuery -->
+  <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <!-- choose a theme file -->
+  <link rel="stylesheet" href="/static/tablesorter/css/theme.default.css">
+  <!-- load jQuery and tablesorter scripts -->
+  <script type="text/javascript" src="/static/tablesorter/js/jquery.tablesorter.js"></script>
+
+  <!-- tablesorter widgets (optional) -->
+  <script type="text/javascript" src="/static/tablesorter/js/jquery.tablesorter.widgets.js"></script>
+
     {% load staticfiles %}
   <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
   <!-- PatternFly Styles -->
   <link href="{% static 'bower_components/patternfly/dist/css/patternfly.min.css' %}" rel="stylesheet" media="screen, print">
   <link href="{% static 'bower_components/patternfly/dist/css/patternfly-additions.min.css' %}" rel="stylesheet" media="screen, print">
 
-  <!-- jQuery -->
-  <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+
   <!-- Bootstrap -->
   <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
   <!-- PatternFly -->
@@ -38,13 +48,7 @@
           </li>
           <li>
             <a href="{% url 'graph' %}">Graph</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
+          </li>        
         </ul>
       </div>
     </nav>
