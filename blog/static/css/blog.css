@@ -8,16 +8,17 @@ h1 {
 	padding-bottom: 15px;
 }
 .filter-row{
-   margin-bottom:25px;
-   border-top: 2px solid #f6f6f6 ;
-   border-bottom: 2px solid #f1f1f1 ;
+   margin-bottom: auto;
+   border-top: 25px solid #f6f6f6 ;
+   border-bottom: 25px solid #f1f1f1 ;
    background-color:#fafafa ;
 }
 .filter-row .text{
-   padding-left:35px;
+   padding:35px;
    font-size: 14px;
    font-weight: bold;
-   margin-top:6px;
+   margin-top:8px;
+   display: inline;
 }
 .filter-button.selected{
    box-shadow: 0 0 5px 2px #0ca6f2 ;
@@ -29,32 +30,32 @@ h1 {
    font-weight: bold;
    cursor:pointer;
    margin-top: 5px;
-   margin-bottom:5px;
+   margin-bottom: auto;
 }
 #Backlog.on{
-   background-color: #DCDCDC ;
+   background-color: #FFFFFF ;
 }
 
 #Elaboration.on{
-   background-color: #C896E4 ;
+   background-color: #FFFFFF ;
 }
 
 #Dev.on{
-   background-color: #2DC408 ;
+   background-color: #FFFFFF ;
 }
 
 #QA.on{
-   background-color: #2DC408 ;
+   background-color: #FFFFFF ;
 }
 
 #Acceptance.on{
-   background-color: #2DC408 ;
+   background-color: #FFFFFF ;
 }
 
 #Ready.on{
-   background-color: #2DC408 ;
+   background-color: #FFFFFF ;
 }
 
 #Releasing.on{
-   background-color: #DCDCDC ;
+   background-color: #FFFFFF ;
 }
