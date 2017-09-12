@@ -34,8 +34,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+  console.log("Launch doc");
   $("#backlog_table").tablesorter();
   $('.filter-button').on('click', function(){
+    console.log("launch button");
      $('.filter-button').removeClass('selected');
      $(this).addClass('selected');
      var clickedBtn = $(this).attr('id');
