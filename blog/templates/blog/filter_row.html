@@ -1,30 +1,62 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  console.log("Launch doc");
+  $("#backlog_table").tablesorter();
+  $('.filter-button').on('click', function(){
+    console.log("launch button");
+     $('.filter-button').removeClass('selected');
+     $(this).addClass('selected');
+     var clickedBtn = $(this).attr('id');
+     var rowSelected = $('.'+clickedBtn).parent();
+     if(clickedBtn != 'all'){
+       $('tbody tr ').hide();
+       rowSelected.show();
+     }
+     else{
+       $('tbody tr ').show();
+     }
+   });
+$('#btnPizza').click(function(e) {
+e.preventDefault();
+
+var data_type = 'data:application/vnd.ms-excel';
+var table_div = document.getElementById('table_wrapper');
+var table_html = table_div.outerHTML.replace(/ /g, '%20');
+
+var a = document.createElement('a');
+a.href = data_type + ', ' + table_html;
+a.download = 'exported_table_.xls';
+a.click();
+});
+});
+</script>
 <div class="row filter-row">
    <div class="col-md-1">
-   <div class="text"> <p> Filter:</p> </div>
+   <div class="text">Filter:</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on selected" id="all"><p> All</p> </div>
+     <div class="filter-button on selected" id="all">All</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Backlog"> <p>Backlog </p> </div>
+     <div class="filter-button on" id="Backlog">Backlog</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Elaboration"> <p> Elaboration </p></div>
+     <div class="filter-button on" id="Elaboration">Elaboration</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Dev"><p> Dev </p> </div>
+     <div class="filter-button on" id="Dev">Dev</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="QA"><p> QA </p> </div>
+     <div class="filter-button on" id="QA">QA</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Acceptance"> <p> Acceptance </p></div>
+     <div class="filter-button on" id="Acceptance">Acceptance</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Ready"> <p> Ready to Release </p></div>
+     <div class="filter-button on" id="Ready">Ready to Release</div>
    </div>
    <div class="col-md-1">
-     <div class="filter-button on" id="Releasing"> <p> Releasing </p> </div>
+     <div class="filter-button on" id="Releasing">Releasing</div>
    </div>
 
 
