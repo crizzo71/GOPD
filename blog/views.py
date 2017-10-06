@@ -6,13 +6,9 @@ def home(request):
     return render(request, 'blog/home.html')
 def story_list(request):
     rally = initRally()
-    query_criteria='c_BusOpsKanban != "Verified"' #CreationDate > "2014-12-31T00:00:00.0Z"
-    #query_criteria='FormattedID = "US75327"'
-    #query_criteria = 'c_BusOpsKanban != ""'
+    query_criteria='c_BusOpsKanban != "Verified"' CreationDate > "2013-06-31T00:00:00.0Z"
     response = rally.get('UserStory', fetch = True, query=query_criteria)
     response_defect = rally.get('Defect', fetch = True, query=query_criteria)
-    #print (response_custom)
-    #HierarchicalRequirement
     story_list = []
     if not response.errors:
         for story in response:
@@ -27,19 +23,6 @@ def story_list(request):
             a_story['Requester']= story.Owner.Name if story.Owner else "unassigned"
             a_story['Blocked']= story.Blocked
             a_story['Service']= getattr(story.ServiceNowID,'LinkID','N/A')
-            #print (story.ServiceNowID.__dict__)
-            #a_story['Service']=story.ServiceNowID.__dict__
-            #varx=story.ServiceNowID
-            #print(getattr(varx,'LinkID','N/A'))
-            #for y in varx:
-                #print (y.Name)
-            #attr_name =""
-            #if story.c_ServiceNowID.WebLink:
-                #print ("True")
-            #else:
-                #print("False")
-            #a_story['Service']= Dstring
-            #a_story['Service']= story.ServiceNowID.__dict__
             story_list.append(a_story)
     if not response_defect.errors:
         for story in response_defect:
