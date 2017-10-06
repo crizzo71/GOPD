@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'blog/home.html')
 def story_list(request):
     rally = initRally()
-    query_criteria='c_BusOpsKanban != "Verified"' CreationDate > "2013-06-31T00:00:00.0Z"
+    query_criteria='c_BusOpsKanban != "Verified" AND CreationDate > "2014-06-01T00:00:00.0Z"'
     response = rally.get('UserStory', fetch = True, query=query_criteria)
     response_defect = rally.get('Defect', fetch = True, query=query_criteria)
     story_list = []
