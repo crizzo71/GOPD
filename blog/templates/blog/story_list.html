@@ -8,6 +8,7 @@
   <table class='table table-striped table-bordered tablesorter' id="backlog_table">
     <thead>
       <tr>
+        <th> Rank </th>
         <th> State </th>
         <th> StoryID </th>
         <th> Service Now </th>
@@ -20,6 +21,7 @@
   <tbody>
       {% for story in stories %}
       <tr>
+        <td>{{story.Rank}}</td>
         <td class='{{story.State}}'>{{story.State}}</td>
         <td>{{story.id}}</td>
         <td>{{story.Service}}</td>
